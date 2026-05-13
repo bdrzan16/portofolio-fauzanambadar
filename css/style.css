@@ -1,0 +1,517 @@
+/* ================= UNIVERSAL =================== */
+* {
+    font-family: 'inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+section {
+  scroll-margin-top: 80px; 
+}
+
+.btn {
+    transition: 0.3s;
+}
+
+.btn-aksen {
+    background-color: #2DC1AB;
+    color: white;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+
+.btn-aksen:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(45, 212, 191, 0.4);
+    color: white !important;
+    background-color: #176357;
+}
+
+.btn-aksen:active {
+    background-color: transparent !important;
+    color: #2DC1AB !important;
+    border: 1px solid #2DC1AB;
+}
+
+.text-aksen {
+    color: #2DC1AB;
+}
+
+/* ==================== NAVBAR ===================== */
+.navbar-brand {
+    font-family: "Oswald", sans-serif;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: #2DC1AB;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+/* ==================== HOME PAGE ===================== */
+.hero-content {
+    width: 400px; 
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 10%);
+}
+
+.hero-content::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #2dd4bf;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-content::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #2dd4bf;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.profile-img {
+    z-index: 2;
+    max-height: 65vh;
+    position: absolute;
+    transform: translate(15%, -12%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
+    mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
+}
+
+.circle-text {
+    z-index: 1;
+    font-family: "Oswald", sans-serif;
+    font-size: 13.5vw;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tagline {
+    font-size: 2.2vw;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    font-family: "Montserrat", sans-serif;
+    bottom: 10%;
+    left: -45%;
+    z-index: 3;
+    text-align: left;
+}
+
+.btn-port {
+    bottom: 15%;
+    right: -35%;
+    z-index: 3;
+}
+
+/* ==================== HOME PAGE [RESPONSIVE MOBILE] ===================== */
+@media (max-width: 1024px) {
+    .hero-content {
+        width: 350px; 
+        height: 350px;
+    }
+
+    .hero-content::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero-content::after {
+        width: 350px;
+        height: 350px;
+    }
+
+    .profile-img {
+        max-height: 64vh;
+    }
+
+    .tagline {
+        font-size: 2.5vw;
+        left: -40%;
+    }
+
+    .circle-text {
+        font-size: 16vw;
+        top: 30%;
+    }
+
+    .btn-port {
+        right: -45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 350px; 
+        height: 350px;
+    }
+
+    .hero-content::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero-content::after {
+        width: 350px;
+        height: 350px;
+    }
+
+    .profile-img {
+        max-height: 64vh;
+    }
+
+    .tagline {
+        font-size: 3.2vw;
+        left: -40%;
+    }
+
+    .circle-text {
+        font-size: 20vw;
+        top: 30%;
+    }
+}
+
+@media (max-width: 636px) {
+    .hero-content {
+        width: 350px; 
+        height: 350px;
+    }
+
+    .hero-content::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero-content::after {
+        width: 350px;
+        height: 350px;
+    }
+
+    .circle-text {
+        font-size: 25vw;
+    }
+
+    .tagline {
+        font-size: 4vw;
+        left: -25%;
+    }
+
+    .btn-port {
+        bottom: -12%;
+        right: -25%;
+    }
+}
+
+@media (max-width: 528px) {
+    .hero-content {
+        width: 300px; 
+        height: 300px;
+    }
+
+    .hero-content::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-content::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle-text {
+        font-size: 28vw;
+    }
+
+    .profile-img {
+        max-height: 58vh;
+    }
+
+    .tagline {
+        font-size: 4vw;
+        left: -26%;
+    }
+
+    .btn-port {
+        bottom: -20%;
+        right: -25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        width: 270px; 
+        height: 270px;
+    }
+
+    .hero-content::before {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hero-content::after {
+        width: 270px;
+        height: 270px;
+    }
+
+    .circle-text {
+        font-size: 28vw;
+    }
+
+    .profile-img {
+        max-height: 52vh;
+    }
+
+    .tagline {
+        font-size: 4vw;
+        left: -15%;
+    }
+
+    .btn-port {
+        bottom: -30%;
+        right: -20%;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-content {
+        width: 270px; 
+        height: 270px;
+    }
+
+    .hero-content::before {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hero-content::after {
+        width: 270px;
+        height: 270px;
+    }
+
+    .circle-text {
+        font-size: 28vw;
+    }
+
+    .profile-img {
+        max-height: 52vh;
+    }
+
+    .tagline {
+        font-size: 4vw;
+        left: -10%;
+    }
+
+    .btn-port {
+        bottom: -30%;
+        right: -10%;
+    }
+}
+
+
+/* ==================== ABOUT PAGE ===================== */
+.about-text {
+    position: relative;
+    left: 0;
+    transform: translateX(-30%);
+}
+
+.about-description {
+    max-width: 500px;
+}
+
+.about-img {
+    height: 410px;
+    width: 350px;
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
+    mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #2DC1AB;
+}
+
+/* ==================== RESUME PAGE ===================== */
+.hero-resume {
+    background-color: #000;
+}
+
+.border-aksen {
+    border-color: #2DC1AB !important;
+    box-shadow: 0 0 30px rgb(45, 193, 171, 0.6);
+}
+
+.slider-container {
+    transition: height 0.4s ease-in-out;
+    align-items: flex-start;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.timeline {
+    list-style: none;
+    padding-left: 30px;
+    border-left: 2px solid #2DC1AB;
+    margin-left: 10px;
+}
+
+.timeline li {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -37px; 
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #2DC1AB;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #2DC1AB;
+}
+
+/* ==================== PORTFOLIO PAGE ===================== */
+.img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-port {
+    border-top-left-radius: inherit; 
+    border-top-right-radius: inherit;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgb(45, 193, 171, 0.4) !important;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #666;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* ==================== CONTACT PAGE ===================== */
+.contact-banner {
+    width: fit-content;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #2DC1AB 0%, #176357 100%);
+    border-radius: 80px 15px 80px 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgb(45, 193, 171, 0.4);
+}
+
+.contact-banner h2 {
+    margin-bottom: 10px;
+}
+
+.contact-banner p {
+    font-size: 1.2rem;
+}
+
+.btn-contact {
+    background-color: white;
+    color: #2DC1AB;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+
+.btn-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(45, 212, 191, 0.4);
+    color: white !important;
+    background-color: #176357;
+}
+
+.btn-contact:active {
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid white;
+}
